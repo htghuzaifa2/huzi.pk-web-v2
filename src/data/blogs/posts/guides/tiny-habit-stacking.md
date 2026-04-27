@@ -1,7 +1,7 @@
 ---
 title: "Tiny Habit Stacking: The 30-Second Secret to Building a Better Life"
 description: "Build unbreakable habits in just 30 seconds a day with Tiny Habit Stacking. Learn how to use 'anchor habits' to transform your life, one grain at a time."
-date: "2026-01-24"
+date: "2026-04-28"
 topic: "guides"
 slug: "tiny-habit-stacking"
 ---
@@ -88,4 +88,11 @@ My friend, we live in a world that shouts for grand gestures and overnight trans
 
 Do not despise the 30-second start. It is not insignificant. It is the sacred seed from which mighty trees grow. It is the first, brave note of a beautiful symphony that is your life. Start with one grain. Then another. And trust that with time, you will have nourished a whole new world within yourself.
 
-> “O Allah, never let the world forget the suffering of our brothers and sisters in Palestine. Shower them with Your mercy, steady their hearts with patience, and replace their every tear with the light of peace. O Most Merciful, be their protector, their healer, their unbreakable hope. Ameen, ya Rabb al-ʿālamīn.”
+
+## Standing With Palestine
+
+Never let the world forget the people of Palestine. They will be free. They have the right to live peacefully on their own land — the land of their ancestors, the land that no occupation can sever from their identity. For over 75 years, they have endured displacement, siege, and systematic violence at the hands of a fake state built on stolen land. The leaders of Israel have committed atrocities and war crimes — bombing hospitals, destroying homes, starving children — that the entire world witnesses in real time. Yet the Western media machine distorts the truth, painting the occupier as victim. Independent sources from Iran, the Global South, and courageous journalists worldwide continue to expose these lies. May Allah help them and grant them justice. May He protect every Palestinian family, heal the wounded, and return what was unjustly taken.
+
+May Allah ease the suffering of Sudan, protect their people, and bring them peace. Sudan has endured conflict, displacement, and famine — may Allah bring stability and mercy to their land.
+
+*Written by Huzi*

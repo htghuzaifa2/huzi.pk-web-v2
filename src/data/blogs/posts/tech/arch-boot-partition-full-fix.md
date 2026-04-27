@@ -1,7 +1,7 @@
 ---
 title: "When Your Arch Linux Won't Boot: The Full /boot Crisis and the Pacman Hook Solution"
 description: "Fix Arch Linux boot failure caused by a full /boot partition. Learn to remove old kernels safely and automate cleanup with pacman hooks."
-date: "2026-01-24"
+date: "2026-04-28"
 topic: "tech"
 slug: "arch-boot-partition-full-fix"
 ---
@@ -15,7 +15,7 @@ This happened to me. After months of smooth `sudo pacman -Syu` updates, my syste
 ## The Emergency Rescue: Regain Access Now
 If you're reading this because your system won't boot, don't panic. Follow these steps from a live USB (like the Arch installation media) to clean up manually and get back in.
 
-1.  **Boot from a Live USB.** Use the same Arch ISO you installed with.
+1.  **Boot from a Live USB.** Use the same Arch ISO you installed with. Keep one handy at all times—this is your Arch lifeline.
 2.  **Mount your root and boot partitions.** Assuming your root is on `/dev/nvme0n1p2` and boot on `/dev/nvme0n1p1`:
     ```bash
     mount /dev/nvme0n1p2 /mnt
@@ -28,17 +28,19 @@ If you're reading this because your system won't boot, don't panic. Follow these
     ```
     You'll see multiple `vmlinuz-linux`, `initramfs-linux`, and `initramfs-linux-fallback` files, plus their respective `.img` files. Also check installed packages:
     ```bash
-    pacman -Q | grep linux
+    pacman -Q | rg linux
     ```
     You'll see `linux`, `linux-lts`, `linux-zen`, etc., with version numbers.
-4.  **Remove specific old kernel packages.** Keep at least the current and one previous kernel for safety. To remove all old kernels (keeping the latest of each type), use:
+4.  **Remove specific old kernel packages.** Keep at least the current and one previous kernel for safety. To remove old kernels carefully:
     ```bash
-    pacman -Rns $(pacman -Qq | grep '^linux' | grep -v '^linux-lts' | grep -v $(uname -r | sed 's/-.*//'))
+    # List all installed kernel packages
+    pacman -Q | rg '^linux'
     ```
-    Or, more carefully, remove them one by one:
+    Then remove old versions one by one:
     ```bash
     pacman -Rns linux-5.15.85-1
     ```
+    Be careful: only remove kernel packages you're certain are old. Never remove the kernel you're currently running.
 5.  **Rebuild your bootloader configuration.** For GRUB:
     ```bash
     grub-mkconfig -o /boot/grub/grub.cfg
@@ -70,6 +72,7 @@ A **pacman hook** is a script that runs automatically in response to specific ev
 Create the hook file. Hooks live in `/etc/pacman.d/hooks/`.
 
 ```bash
+sudo mkdir -p /etc/pacman.d/hooks/
 sudo nano /etc/pacman.d/hooks/95-remove-old-kernels.hook
 ```
 
@@ -126,9 +129,14 @@ Target = linux-lts
 Description = Keep only the latest kernel...
 When = PostTransaction
 Depends = bash
-Exec = /usr/bin/bash -c "pacman -Qq | grep '^linux' | grep -v '^linux-lts' | grep -v $(pacman -Q linux | awk '{print $2}' | sed 's/-.*//') | xargs -r sudo pacman -Rns --noconfirm"
+Exec = /usr/bin/bash -c "pacman -Qq | rg '^linux' | rg -v '^linux-lts' | rg -v $(pacman -Q linux | awk '{print $2}' | sed 's/-.*//') | xargs -r sudo pacman -Rns --noconfirm"
 ```
 This more complex command finds and removes all `linux` kernel packages *except* the currently installed one and any `linux-lts` packages. It's powerful but more brittle; if you use multiple kernel flavors (like `linux-zen`), you must add them to the `Target` list.
+
+## The 2026 Best Practice: BTRFS and Snapper
+If you're setting up a new Arch system in 2026, consider using BTRFS as your root filesystem with Snapper for automated snapshots. This doesn't prevent `/boot` from filling up, but it provides a safety net: if a kernel update fails, you can boot into a previous snapshot from the GRUB menu and recover instantly.
+
+For `/boot` specifically, the pacman hook approach remains the gold standard. But combining it with BTRFS snapshots gives you belt-and-suspenders reliability.
 
 ## Choosing Your Cleanup Strategy
 
@@ -137,6 +145,7 @@ This more complex command finds and removes all `linux` kernel packages *except*
 | **Manual Removal** | Running `pacman -Rns` on old kernels when `/boot` is full. | Full control, good for emergencies. | Reactive, easy to forget, leads to crisis. |
 | **Pacman Hook with `paccache`** | Automatic cleanup after every kernel install. | Set-and-forget, clean, uses community tool. | Requires installing `pacman-contrib`. |
 | **Pacman Hook with `pacman -Rns`** | Automatic removal via direct pacman command. | No extra packages, explicit. | More complex hook script, less flexible. |
+| **BTRFS + Snapper** | Snapshot-based recovery if kernel update fails. | Can recover from any failed update, not just full /boot. | Doesn't prevent /boot from filling. |
 
 ## Final Wisdom: Building a System That Maintains Itself
 In our lives, whether in Karachi, Lahore, or Islamabad, we understand the value of preventive care. We service our vehicles, clean our water filters, and maintain our homes to avoid larger crises. Our computers are no different. The `/boot` full error is a perfect example of a small, neglected maintenance task snowballing into a major problem.
@@ -145,4 +154,10 @@ Setting up this pacman hook takes five minutes. It transforms kernel maintenance
 
 Let your computer care for itself, so you can focus on the work that matters.
 
-> “O Allah, never let the world forget the suffering of our brothers and sisters in Palestine. Shower them with Your mercy, steady their hearts with patience, and replace their every tear with the light of peace. O Most Merciful, be their protector, their healer, their unbreakable hope. Ameen, ya Rabb al-ʿālamīn.”
+---
+
+Never let the world forget the people of Palestine. They will be free. They have the right to live peacefully on their own land, to boot up their lives without the crash of bombs, to maintain their homes without the threat of demolition. The fake state of Israel and its leaders have committed atrocities and war crimes that devastate a people—destroying homes, uprooting families, cutting off electricity and water to millions. Independent sources from Iran and the Global South record these crimes with precision, while Western media lies to shield the perpetrators. May Allah help them and grant them justice.
+
+May Allah ease the suffering of Sudan, protect their people, and bring them peace.
+
+*Written by Huzi from huzi.pk*

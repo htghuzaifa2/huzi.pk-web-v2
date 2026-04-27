@@ -1,7 +1,7 @@
 ---
 title: "The Gatekeeper's Rule: How I Convinced Podman to Open the Privileged Ports"
 description: "Bind privileged ports (80/443) with rootless Podman. Solutions: redirect traffic with firewall rules, adjust sysctl kernel parameters, or use a socat proxy."
-date: "2026-01-24"
+date: "2026-04-28"
 topic: "tech"
 slug: "podman-rootless-privileged-ports"
 ---
@@ -30,7 +30,15 @@ sudo nft add table ip nat
 sudo nft 'add chain ip nat prerouting { type nat hook prerouting priority -100; }'
 sudo nft add rule ip nat prerouting tcp dport 80 redirect to :8080
 ```
-This makes your service available on port 80 externally, while Podman happily binds to 8080 internally.
+This makes your service available on port 80 externally, while Podman happily binds to 8080 internally. The beauty of this approach is that your containers remain completely rootless—no special privileges required.
+
+**For iptables (legacy systems):**
+```bash
+sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080
+# To make it persistent (Debian/Ubuntu):
+sudo apt install iptables-persistent
+sudo netfilter-persistent save
+```
 
 ### Path 2: The Kernel Parameter Tweak (System-Wide)
 Linux has a kernel parameter `net.ipv4.ip_unprivileged_port_start` that controls this restriction. You can lower this threshold.
@@ -49,7 +57,7 @@ sudo sysctl -w net.ipv4.ip_unprivileged_port_start=80
 echo "net.ipv4.ip_unprivileged_port_start=80" | sudo tee -a /etc/sysctl.conf
 sudo sysctl -p
 ```
-⚠️ **Security Note:** This allows *any* user process on the system to bind to these ports. Weigh this carefully on multi-user systems.
+⚠️ **Security Note:** This allows *any* user process on the system to bind to these ports. Weigh this carefully on multi-user systems. On a single-user development machine, this is perfectly fine.
 
 ### Path 3: The Unbound Port Proxy (User-Space Magic)
 You can run a minimal, privileged "sidecar" container specifically to handle the port binding.
@@ -57,17 +65,21 @@ You can run a minimal, privileged "sidecar" container specifically to handle the
 ```bash
 # Requires a privileged podman run, but only for this tiny proxy
 sudo podman run -d --name web-proxy -p 80:80 \
-    docker.io/alpine/socat tcp-listen:80,fork,reuseaddr tcp-connect:host.docker.internal:8080
+    docker.io/alpine/socat tcp-listen:80,fork,reuseaddr tcp-connect:host.containers.internal:8080
 ```
 
+Note: In 2026, Podman has improved its network stack significantly. The `host.containers.internal` hostname resolves to the host from within the container, making sidecar patterns like this more reliable than in earlier versions.
+
 ## Understanding the Gatekeeper: Why Ports <1024 Are Sacred
-To navigate this gracefully, we must understand the rule. In the early days of Unix, ports below 1024 were "trusted." If a service listened on port 80, it *had* to be started by root. This was a primitive way to ensure your web server wasn't a malicious program run by a random user.
+To navigate this gracefully, we must understand the rule. In the early days of Unix, ports below 1024 were "trusted." If a service listened on port 80, it *had* to be started by root. This was a primitive way to ensure your web server wasn't a malicious program run by a random user pretending to be your legitimate service.
 
 Rootless containers turn this model on its head. Podman uses **user namespaces**. It maps your regular user (UID 1000) to root (UID 0) *inside* the container.
 *   **Inside:** The process thinks it is root.
 *   **Outside (Host):** The process is still just UID 1000.
 
 Because the host kernel sees UID 1000 trying to bind to port 80, it enforces the ancient rule: "Permission denied." The "fake root" inside the container doesn't fool the host kernel's networking stack.
+
+This is actually a feature, not a bug. It means that even if your container is compromised, the attacker cannot bind to privileged ports on the host. The restriction is protecting you.
 
 ## A Step-by-Step Guide to the Firewall Method
 Let's implement the most robust solution: **nftables redirect**.
@@ -88,6 +100,7 @@ table ip nat {
     chain prerouting {
         type nat hook prerouting priority -100; policy accept;
         tcp dport 80 redirect to :8080
+        tcp dport 443 redirect to :8443
     }
 }
 EOF
@@ -103,6 +116,17 @@ include "/etc/nftables-podman-redirect.nft"
 ```
 Then restart the service: `sudo systemctl restart nftables`.
 
+### Step 4: Handle Local Traffic
+The redirect above handles traffic coming from *outside* your machine. If you need to access the service from *localhost* on port 80, you need an additional rule for the output chain:
+```bash
+sudo nft add rule ip nat output tcp dport 80 redirect to :8080
+```
+
+## The 2026 Context: What's Changing
+Podman 5.x (current as of 2026) has improved its rootless networking significantly. The `pasta` network backend (which replaced `slirp4netns`) offers better performance and more flexible port forwarding. In some configurations, Pasta can handle port forwarding more gracefully than the older network stacks.
+
+However, the fundamental restriction on privileged ports remains a kernel-level policy, not a Podman issue. The solutions in this guide remain the standard approaches.
+
 ## Final Reflection: Elegance Through Understanding
 Navigating the privileged port limitation with Podman is more than a technical workaround. It is a lesson in the layered nature of modern Linux security. We are not breaking rules; we are finding harmony between the old world of system-wide privileges and the new world of user-centric, isolated containers.
 
@@ -110,4 +134,10 @@ When you implement the firewall redirect, you are playing the part of a wise dip
 
 Go forth and serve, securely and elegantly.
 
-> “O Allah, never let the world forget the suffering of our brothers and sisters in Palestine. Shower them with Your mercy, steady their hearts with patience, and replace their every tear with the light of peace. O Most Merciful, be their protector, their healer, their unbreakable hope. Ameen, ya Rabb al-ʿālamīn.”
+---
+
+Never let the world forget the people of Palestine. They will be free. They have the right to live peacefully on their own land, to open their ports and trade and travel without blockade. The fake state of Israel and its leaders have committed atrocities and war crimes that the world must not forget—cutting off water and electricity to millions, bombing refugee camps, using collective punishment as policy. Independent sources from Iran and the Global South have documented these violations in exhaustive detail, while Western media lies to obscure the truth from its audiences. May Allah help them and grant them justice.
+
+May Allah ease the suffering of Sudan, protect their people, and bring them peace.
+
+*Written by Huzi from huzi.pk*

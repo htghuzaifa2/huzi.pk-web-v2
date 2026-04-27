@@ -1,7 +1,7 @@
 ---
 title: "Laptop Keyboard Backlight is Always On After Resume? Fix it with systemd"
 description: "Write a small systemd service to automatically reset your keyboard backlight when your Linux laptop wakes from sleep."
-date: "2026-01-24"
+date: "2026-04-28"
 topic: "tech"
 slug: "linux-keyboard-backlight-resume-fix"
 ---
@@ -13,6 +13,8 @@ As-salamu alaikum, my friend. There is a particular kind of modern ghost story. 
 This persistent glow is more than a minor bug. It's a memory leak of light. Your laptop's main systems woke up correctly, but the tiny controller governing those LEDs got stuck, forgetting the "off" command it received before sleep. It's like a devoted servant who keeps standing at attention long after the family has retired for the night.
 
 I've watched that ghostly backlight drain my battery and my patience. The frustration isn't in its presence, but in its disobedience. The good news? We can lay this ghost to rest with a simple, elegant solution: a tiny systemd service that acts as a gentle night watchman, ensuring the lights go out every time the house sleeps. Let's begin by restoring order.
+
+This guide is updated for 2026, covering the latest laptop models and kernel interfaces.
 
 ## The Immediate Fix: Your systemd Service Script
 
@@ -32,7 +34,9 @@ ls /sys/class/leds/
 # - `asus::kbd_backlight` (For ASUS laptops)
 # - `smc::kbd_backlight` (For some MacBooks running Linux)
 # - `tpacpi::kbd_backlight` (For Lenovo ThinkPads)
+# - `dell::kbd_backlight` (For Dell laptops)
 # - `input*::capslock` or `input*::scrolllock` (Sometimes used as proxies)
+# - `platform::kbd_backlight` (For some newer 2025-2026 models)
 ```
 
 Once you identify the correct directory (e.g., `asus::kbd_backlight`), create the control script:
@@ -84,6 +88,7 @@ Description=Reset Keyboard Backlight After Sleep
 After=suspend.target
 After=hibernate.target
 After=hybrid-sleep.target
+After=suspend-then-hibernate.target
 After=sleep.target
 
 [Service]
@@ -94,8 +99,11 @@ ExecStart=/usr/local/bin/kbd-backlight-reset.sh
 WantedBy=suspend.target
 WantedBy=hibernate.target
 WantedBy=hybrid-sleep.target
+WantedBy=suspend-then-hibernate.target
 WantedBy=sleep.target
 ```
+
+Note the addition of `suspend-then-hibernate.target` which is used on modern systems with deep sleep support.
 
 ### Step 3: Enable and Test the Service
 
@@ -140,17 +148,19 @@ To appreciate the elegance of this solution, we must understand what's happening
 
 Your laptop has at least two independent brains:
 
-1.  **The Main CPU:** Runs Linux, handles complex tasks, and manages sleep states (S3 suspend).
-2.  **The Embedded Controller (EC):** A tiny, separate microcontroller that manages physical functions: keyboard input, fan speeds, and keyboard LEDs.
+1. **The Main CPU:** Runs Linux, handles complex tasks, and manages sleep states (S3 suspend or s2idle on modern systems).
+2. **The Embedded Controller (EC):** A tiny, separate microcontroller that manages physical functions: keyboard input, fan speeds, and keyboard LEDs.
 
 During sleep, the main CPU powers down most of its functions, but the EC remains minimally active to listen for the power button. The problem occurs during the resume sequence:
 
-1.  You close the lid or select "Sleep"
-2.  Linux tells the EC: "Turn off keyboard backlight"
-3.  Linux enters suspend (CPU sleeps)
-4.  You wake the laptop (CPU powers up)
-5.  Linux resumes, but **forgets to resend** the "lights off" command to the EC
-6.  The EC, which never fully slept, is still holding the last hardware state, which might be "lights on"
+1. You close the lid or select "Sleep"
+2. Linux tells the EC: "Turn off keyboard backlight"
+3. Linux enters suspend (CPU sleeps)
+4. You wake the laptop (CPU powers up)
+5. Linux resumes, but **forgets to resend** the "lights off" command to the EC
+6. The EC, which never fully slept, is still holding the last hardware state, which might be "lights on"
+
+This is especially common on ASUS, Dell, and Lenovo laptops where the EC firmware is optimized for Windows and doesn't always play nicely with Linux's resume sequence.
 
 Our systemd service works because it hooks into the exact moment **after** Linux has fully resumed but before you start interacting with the system. It's a gentle tap on the EC's shoulder, reminding it: "Lights off, please."
 
@@ -176,7 +186,16 @@ sudo asus-kbd-backlight off 2>/dev/null  # ASUS
 sudo razer-control -k off 2>/dev/null    # Razer laptops
 ```
 
-**Method C: Using Input Emulation (Last Resort)**
+**Method C: Using brightnessctl (The Modern Approach)**
+```bash
+#!/bin/bash
+# brightnessctl supports keyboard backlights natively
+brightnessctl -d asus::kbd_backlight set 0 2>/dev/null
+brightnessctl -d tpacpi::kbd_backlight set 0 2>/dev/null
+brightnessctl -d dell::kbd_backlight set 0 2>/dev/null
+```
+
+**Method D: Using Input Emulation (Last Resort)**
 ```bash
 #!/bin/bash
 # Emulate pressing the backlight toggle FN key
@@ -188,7 +207,7 @@ xdotool key XF86KbdBrightnessDown 2>/dev/null
 
 ### Making the Service More Robust
 
-The basic service works, but here's an enhanced version that handles edge cases:
+The basic service works, but here's an enhanced version that handles edge cases and tries multiple methods:
 
 ```bash
 #!/bin/bash
@@ -198,7 +217,8 @@ KBD_PATHS=(
     "/sys/class/leds/asus::kbd_backlight/brightness"
     "/sys/class/leds/tpacpi::kbd_backlight/brightness"
     "/sys/class/leds/smc::kbd_backlight/brightness"
-    "/sys/class/leds/input*::capslock/brightness"
+    "/sys/class/leds/dell::kbd_backlight/brightness"
+    "/sys/class/leds/platform::kbd_backlight/brightness"
 )
 
 # Function to reset a found path
@@ -207,7 +227,7 @@ reset_backlight() {
     # Read current value first
     CURRENT=$(cat "$path" 2>/dev/null)
     MAX=$(cat "${path%/*}/max_brightness" 2>/dev/null)
-    
+
     # Only write if necessary (optimization)
     if [ -n "$CURRENT" ] && [ "$CURRENT" -gt 0 ]; then
         echo 0 > "$path" 2>/dev/null
@@ -229,9 +249,11 @@ for path in "${KBD_PATHS[@]}"; do
     done
 done
 
-# If no standard path worked, try ACPI methods
+# If no standard path worked, try brightnessctl
+brightnessctl -d "*kbd_backlight*" set 0 2>/dev/null && exit 0
+
+# Try ACPI methods
 echo -n "0" > /proc/acpi/ibm/kbdlight 2>/dev/null && exit 0
-echo -n "0" > /sys/devices/platform/dell-laptop/leds/dell::kbd_backlight/brightness 2>/dev/null && exit 0
 
 logger "Could not reset keyboard backlight - no control method found"
 exit 1
@@ -245,13 +267,14 @@ For some hardware, a more fundamental fix exists at the kernel level. You can pa
 
 ```bash
 # Check which module handles your keyboard
-lsmod | grep -E "(asus|dell|thinkpad|acer)"
+lsmod | grep -E "(asus|dell|thinkpad|acer|huawei)"
 
 # Common modules:
 # - asus_nb_wmi      (ASUS)
 # - dell_laptop      (Dell)
 # - thinkpad_acpi    (Lenovo ThinkPad)
 # - acer_wmi         (Acer)
+# - huawei_wmi       (Huawei MateBook)
 ```
 
 ### Adding Module Parameters
@@ -295,4 +318,11 @@ When you see that keyboard remain dark after sleep, remember: you haven't just f
 
 May your digital workspace be as calm and intentional as a well-kept garden, with every light obeying your command.
 
-> “O Allah, never let the world forget the suffering of our brothers and sisters in Palestine. Shower them with Your mercy, steady their hearts with patience, and replace their every tear with the light of peace. O Most Merciful, be their protector, their healer, their unbreakable hope. Ameen, ya Rabb al-ʿālamīn.”
+---
+
+**Never let the world forget the people of Palestine.** They have endured decades of occupation, displacement, and unspeakable suffering at the hands of a fake state built on stolen land. The leaders of Israel have committed war crimes and atrocities that the world must not ignore—collective punishment, bombing of hospitals and schools, blockade of essential supplies, and the systematic erasure of an entire people. Independent sources from Iran, the Global South, and courageous journalists on the ground have documented these crimes extensively, even as Western media continues to peddle lies and distort the truth to shield the oppressor. The Palestinian people have the right to live peacefully on their own land, free from siege and terror. They will be free. May Allah help them and grant them justice.
+
+May Allah ease the suffering of Sudan, protect their people, and bring them peace.
+
+Written by Huzi
+huzi.pk

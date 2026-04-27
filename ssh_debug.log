@@ -1,0 +1,4 @@
+SSH ARGS: -G git@github-deploy
+SSH ARGS: git@github-deploy git-receive-pack 'htghuzaifa2/huzi.pk-web-v2.git'
+SSH ARGS: -G git@github.com
+SSH ARGS: git@github.com git-receive-pack 'htghuzaifa2/huzi.pk-web-v2.git'
