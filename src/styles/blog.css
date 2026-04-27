@@ -1,0 +1,137 @@
+.blog-post {
+  width: 100%;
+  max-width: 1400px;
+  /* Large container but not edge-to-edge text for readability */
+  padding: 0 1.5rem;
+  line-height: 1.8;
+  color: hsl(var(--foreground));
+}
+
+/* Hide default H1 inside the content if they exist, as we render main title separately */
+.blog-content h1 {
+  display: none;
+}
+
+.blog-post h2 {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: hsl(var(--primary));
+}
+
+.blog-post h3 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.blog-post p {
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+  /* Larger text for better readability */
+  color: hsl(var(--muted-foreground));
+}
+
+.blog-post ul,
+.blog-post ol {
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+  font-size: 1.125rem;
+}
+
+.blog-post li {
+  margin-bottom: 0.75rem;
+}
+
+.blog-content img {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin: 3rem 0;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+}
+
+.mermaid {
+  background: hsl(var(--muted) / 0.5);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow:
+    0 10px 40px -10px hsl(var(--foreground) / 0.15),
+    inset 0 1px 0 hsl(var(--background) / 0.5);
+  margin: 3rem 0;
+  display: flex;
+  justify-content: center;
+  cursor: zoom-in;
+  overflow-x: auto;
+  border: 1px solid hsl(var(--border));
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mermaid:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 15px 50px -10px hsl(var(--foreground) / 0.2),
+    inset 0 1px 0 hsl(var(--background) / 0.5);
+}
+
+/* Mermaid SVG sizing */
+.mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.blog-post a {
+  color: hsl(var(--primary));
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.blog-post blockquote {
+  border-left: 4px solid hsl(var(--primary));
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  background: hsl(var(--muted) / 0.3);
+  padding: 1.5rem;
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.blog-post strong {
+  font-weight: 700;
+  color: hsl(var(--foreground));
+}
+
+/* Table Styles */
+.blog-post table {
+  width: 100%;
+  margin: 2rem 0;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.blog-post th,
+.blog-post td {
+  padding: 0.75rem 1rem;
+  border: 1px solid hsl(var(--border));
+  text-align: left;
+  vertical-align: top;
+}
+
+.blog-post th {
+  background-color: hsl(var(--muted));
+  color: hsl(var(--foreground));
+  font-weight: 600;
+}
+
+.blog-post tr:nth-child(even) {
+  background-color: hsl(var(--muted) / 0.2);
+}
+
+.blog-post td {
+  color: hsl(var(--muted-foreground));
+}

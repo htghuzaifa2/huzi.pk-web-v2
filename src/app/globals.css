@@ -1,0 +1,181 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    
+    /* Light Theme - Slate Gray & Cool Gray */
+    --primary: 221 39% 11%; /* Slate Gray */
+    --primary-foreground: 210 40% 98%;
+    --primary-hover: 221 39% 25%;
+    --accent: 210 40% 96.1%; /* Lighter Slate for accents */
+    --accent-foreground: 222.2 47.4% 11.2%;
+    
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221 39% 11%;
+    --price: 221 39% 11%;
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 210 40% 98%;
+    --card: 224 71% 4%;
+    --card-foreground: 210 40% 98%;
+    --popover: 224 71% 4%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Dark Theme - Amber/Orange & Warm Gray */
+    --primary: 38 92% 50%; /* Amber/Orange */
+    --primary-foreground: 224 71% 4%;
+    --primary-hover: 38 92% 60%;
+    --accent: 217.2 32.6% 17.5%; /* Warm gray for accents */
+    --accent-foreground: 210 40% 98%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 38 92% 50%;
+    --price: 38 92% 50%;
+    --radius: 0.5rem;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+     overflow-x: hidden;
+  }
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  body, html {
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  }
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--primary-hover)) transparent;
+  }
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--primary-hover));
+    border-radius: 6px;
+    border: 3px solid hsl(var(--background));
+  }
+   ::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(var(--primary));
+  }
+}
+
+@layer components {
+  .lightbox-zoom-in {
+    animation: zoom-in 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .lightbox-zoom-out {
+    animation: zoom-out 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .whatsapp-float {
+    animation: float-pulse 2s infinite ease-in-out;
+  }
+  .animate-rgb-text {
+    background: linear-gradient(90deg, #00f, #0ff, #f0f, #ff0, #f00, #0f0, #00f);
+    background-size: 400% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: cool-rgb-gradient 10s linear infinite;
+    transform: translateZ(0);
+  }
+
+
+  @keyframes zoom-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  @keyframes zoom-out {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+  }
+  @keyframes float-pulse {
+    0%, 100% {
+      transform: translateY(0) translateZ(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(-5px) translateZ(0);
+      opacity: 0.9;
+    }
+  }
+  @keyframes cool-rgb-gradient {
+    to {
+      background-position: -400% center;
+    }
+  }
+  
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .bg-grid-black {
+    background-image: linear-gradient(to right, hsl(var(--foreground)) 1px, transparent 1px), linear-gradient(to bottom, hsl(var(--foreground)) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .content-fade-in {
+    animation: content-fade-in 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  }
+
+  @keyframes content-fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
