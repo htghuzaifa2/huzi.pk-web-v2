@@ -12,6 +12,8 @@ Have you ever seen a ghost in the machine? Your system monitor tells a story of 
 
 This isn't a bug. It's a fundamental feature of how Linux manages memory via overcommit and strictly enforced control groups (cgroups). The real story is hidden in the dance between optimistic promises and modern boundaries. Understanding this dance is the difference between being blindsided by mysterious process deaths and being the engineer who can diagnose and prevent them.
 
+I've seen this exact scenario play out in production environments more times than I can count — a Java application in a Docker container dying at 3 AM, a PostgreSQL worker process silently terminated during a batch job, a Node.js service crashing during peak traffic. Each time, the post-mortem revealed the same pattern: plenty of system-wide RAM available, but a cgroup limit that the process breached. The "Memory Mirage" is one of the most counter-intuitive aspects of Linux system administration, and it catches even experienced engineers off guard.
+
 ## Your Immediate Diagnostic Checklist
 
 The problem occurs because Linux enforces limits via cgroups v2, which can throttle or kill processes long before the whole system runs out of RAM.
@@ -74,6 +76,8 @@ This works beautifully most of the time. Most programs allocate more memory than
 
 If you're running workloads that can't tolerate OOM kills (databases, real-time systems), set `overcommit_memory=2` and ensure `CommitLimit` is sufficient.
 
+Here's a practical scenario that illustrates the danger: a Python application allocates a large NumPy array. The `malloc()` succeeds (the kernel optimistically grants the request), but when the program starts filling the array with data, the physical pages need to be backed. If the system has overcommitted beyond its capacity, the OOM killer will be invoked, and it might choose your most memory-hungry process — which could be your database, not the Python script that caused the problem.
+
 ## Part 2: Cgroups v2 and the Watermarks of Pressure
 
 Modern Linux uses cgroups v2 to enforce resource limits. Understanding the memory watermarks is crucial:
@@ -84,11 +88,15 @@ The "protected zone." Memory below this threshold is considered essential and is
 
 ### `memory.high`
 
-The "throttling gate." Usage above this point causes the kernel to aggressively slow down the process to free pages. The process doesn't die — it becomes extremely slow as the kernel forces synchronous reclaim. This is "slowness before death" and is often the first sign of trouble.
+The "throttling gate." Usage above this point causes the kernel to aggressively slow down the process to free pages. The process doesn't die — it becomes extremely slow as the kernel forces synchronous reclaim. This is "slowness before death" and is often the first sign of trouble. If your application suddenly becomes sluggish for no apparent reason, check `memory.events` for `high` counts — you might be hitting the throttle.
 
 ### `memory.max`
 
-The "hard wall." Exceeding this triggers the local OOM killer immediately. The kernel selects the process with the highest `oom_score` within the cgroup and terminates it. There is no grace period, no warning, no negotiation.
+The "hard wall." Exceeding this triggers the local OOM killer immediately. The kernel selects the process with the highest `oom_score` within the cgroup and terminates it. There is no grace period, no warning, no negotiation. The `oom_score` is calculated based on factors like memory usage, CPU time, and whether the process is privileged — you can view it at `/proc/<PID>/oom_score`.
+
+### A Real-World Docker Example
+
+Let's say you run a Spring Boot application in Docker with `docker run -m 2g myapp`. Docker sets `memory.max=2G` for the container's cgroup. Your JVM, by default, sees the host's total RAM (say 32GB) and allocates a heap based on that. The JVM might grab 8GB of heap — far exceeding the 2GB cgroup limit. The result? The OOM killer terminates your Java process even though the host has 24GB free. The fix is to pass `-XX:MaxRAMPercentage=75.0` to the JVM so it respects the container's memory limit.
 
 ## Your Systematic Troubleshooting Guide
 
@@ -128,6 +136,10 @@ sudo systemctl set-property <service_name>.service MemoryHigh=3.5G
 # For a Docker container
 docker update --memory=4g --memory-swap=4g <container_id>
 ```
+
+### Phase 5: Prevent Recurrence
+
+Set `memory.oom.group` to control which processes are killed within a cgroup, and configure `memory.swap.max` to allow controlled swap usage as a safety buffer. Also consider setting `memory.low` to protect critical services from having their memory reclaimed during pressure.
 
 ---
 

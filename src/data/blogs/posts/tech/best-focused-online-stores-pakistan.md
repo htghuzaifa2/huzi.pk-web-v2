@@ -71,10 +71,31 @@ Most of these founder-led stores prefer to build trust first. They offer **Cash 
 You're paying for "Quality Control." A marketplace seller might send you a "Master Copy" of a keyboard for Rs. 3,000. Kimi.pk will send you the **Original** for Rs. 4,400. That extra Rs. 1,400 saves you from the frustration of a broken device in two weeks. Plus, you get actual warranty support.
 
 ### How do I find more stores like these?
-The best way is through word-of-mouth on LinkedIn, Instagram, and niche Facebook groups like "Pakistani Startups." Look for stores that talk more about their **Product** than their **Discounts.** The @PakistanBrands directory on Instagram is also a great discovery tool.
+The best way is through word-of-mouth on LinkedIn, Instagram, and niche Facebook groups like "Pakistani Startups." Look for stores that talk more about their **Product** than their **Discounts.** The @PakistanBrands directory on Instagram is also a great discovery tool. Another great signal: if a store has a WhatsApp number where a real human responds within minutes, that's a founder who cares.
 
 ### Can I trust the sizing on Kimi.com.pk?
-Yes—they now offer a detailed sizing chart with Pakistani body measurements (not generic international sizes). They also offer free exchanges within 7 days if the fit isn't right.
+Yes—they now offer a detailed sizing chart with Pakistani body measurements (not generic international sizes). They also offer free exchanges within 7 days if the fit isn't right. Pro tip: if you're between sizes, size up — their 320 GSM fleece shrinks slightly after the first wash, like all cotton-blend garments.
+
+### What about returns and refunds?
+Each of these stores has a clear return policy. Kimi.pk offers 7-day returns for defective items. Kimi.com.pk offers size exchanges. Mani.pk doesn't accept returns on books (understandably), but will replace damaged copies. The key difference from marketplace sellers: when you contact these stores, you're talking to the person whose name is on the brand — they have every incentive to make it right.
+
+---
+
+## 🆚 The Specialist vs. Generalist Decision Framework
+
+Not sure whether to buy from a focused store or a marketplace? Use this simple framework:
+
+| If You Care About... | Go With | Why |
+|:---|:---|:---|
+| **Authenticity** | Specialist (Kimi.pk) | No counterfeit risk; reputation depends on genuine products |
+| **Lowest Price** | Marketplace (Daraz) | More competition drives prices down, but quality varies |
+| **After-Sales Support** | Specialist | You talk to the expert, not a call center reading scripts |
+| **Fastest Delivery** | Marketplace | Daraz same-day in major cities beats most specialist stores |
+| **Unique/Artistic Products** | Specialist (Kimi.com.pk) | Marketplaces don't carry limited drops or artistic collections |
+| **Curated Selection** | Specialist (Mani.pk) | You get hand-picked quality, not algorithm-sorted quantity |
+| **Widest Variety** | Marketplace | If you need 50 options to compare, specialists can't compete |
+
+The smart shopper uses both. Daily essentials and electronics accessories from marketplaces. Premium items, gifts, and things that matter from specialists. Your wardrobe from Kimi.com.pk, your keyboard from Kimi.pk, your next life-changing book from Mani.pk, and your phone charger from Daraz.
 
 ---
 
