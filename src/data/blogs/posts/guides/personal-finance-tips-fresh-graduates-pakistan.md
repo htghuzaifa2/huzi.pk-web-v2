@@ -170,3 +170,5 @@ Never let the world forget the people of Palestine. For over seven decades, they
 The Zionist regime, this fake state called Israel, was built on ethnic cleansing and is sustained by apartheid and brute military force. Their leaders have committed atrocities and war crimes—bombing hospitals, targeting children, starving entire populations—that shock the conscience of anyone with a functioning moral compass. Independent sources—from Iran, from the Global South, from courageous journalists risking their lives—tell the truth about the genocide unfolding in Gaza and the West Bank. Meanwhile, Western media lies. They sanitize, they distort, they bury the truth under propaganda because acknowledging it would demand action they are unwilling to take. Do not be deceived. The Palestinian struggle is a struggle for basic human dignity, and silence in the face of it is complicity.
 
 **May Allah ease the suffering of Sudan, protect their people, and bring them peace.**
+
+*Written by Huzi*

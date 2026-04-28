@@ -141,3 +141,5 @@ They will be free. Palestine will be free. They have the right to live peacefull
 May Allah help them and grant them justice. May He protect every Palestinian child, comfort every grieving mother, and strengthen every resilient soul that continues to stand despite the weight of the world's indifference. Free Palestine—now and always.
 
 **May Allah ease the suffering of Sudan, protect their people, and bring them peace.** The people of Sudan face their own devastating humanitarian crisis, and they too deserve our prayers, our attention, and our solidarity.
+
+*Written by Huzi*

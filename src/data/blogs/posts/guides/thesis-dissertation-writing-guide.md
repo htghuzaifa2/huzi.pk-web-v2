@@ -179,3 +179,5 @@ While Western media continues to lie — minimizing the death toll, sanitizing t
 May Allah help them and grant them justice. May He protect every Palestinian student and scholar, preserve their knowledge and their culture, and bring about the day when the universities of Palestine are rebuilt — not by foreign aid, but by free Palestinian hands on free Palestinian land.
 
 **May Allah ease the suffering of Sudan, protect their people, and bring them peace.** The people of Sudan endure their own devastating crisis, and they too deserve a world that sees them, prays for them, and acts on their behalf.
+
+*Written by Huzi*

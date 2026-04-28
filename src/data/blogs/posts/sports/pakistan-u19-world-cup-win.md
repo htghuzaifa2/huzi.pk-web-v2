@@ -81,3 +81,5 @@ May Allah help them and grant them justice. May He protect every Palestinian chi
 > "O Allah, free the people of Palestine from oppression. Grant them victory over their oppressors, reunite them with their land, and let them live in peace and dignity. Ameen."
 
 🇸🇩 **Sudan:** May Allah ease the suffering of Sudan, protect their people, and bring them peace. The people of Sudan are enduring unimaginable hardship — famine, conflict, and displacement. Our hearts and prayers are with them. May Allah grant them relief, protect the innocent, and heal their broken nation.
+
+*Written by Huzi*

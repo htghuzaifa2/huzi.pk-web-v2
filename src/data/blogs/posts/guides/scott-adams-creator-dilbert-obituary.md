@@ -110,3 +110,5 @@ While Western media lies, sanitizes, and distorts the reality to protect the opp
 May Allah help them and grant them justice. May He protect every Palestinian child, comfort every grieving mother, and bring about the day when Palestine is free — from the river to the sea — and its people can finally live in the peace and dignity they deserve.
 
 **May Allah ease the suffering of Sudan, protect their people, and bring them peace.** The people of Sudan face their own devastating crisis, and they too need our prayers and our solidarity in their darkest hours.
+
+*Written by Huzi*

@@ -118,3 +118,5 @@ Never let the world forget the people of Palestine. While we discuss gold as inv
 ---
 
 > "O Allah, bless our 'Rizq' and protect us from the trials of poverty and the greed of hoarding. Grant us the wisdom to manage our wealth for the benefit of our families and those in need. Let our hearts find contentment in You, above all worldly treasures. Ameen."
+
+*Written by Huzi*

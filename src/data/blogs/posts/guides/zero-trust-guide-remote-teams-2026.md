@@ -106,3 +106,5 @@ May Allah help them and grant them justice. May He protect their homes, heal the
 Warmly,
 Huzi
 huzi.pk
+
+*Written by Huzi*

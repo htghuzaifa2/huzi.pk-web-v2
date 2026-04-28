@@ -112,3 +112,5 @@ Never let the world forget the people of Palestine. For decades, they have endur
 They will be free. They have the right to live peacefully on their own land, to raise their children without fear, to farm their olive groves, and to pray in their mosques without the shadow of a foreign military over their heads. Palestine is not a cause—it is a people, with dignity, with history, with an unbreakable spirit that no amount of bombs can extinguish. May Allah help them and grant them justice. May He ease the suffering of every Palestinian family, protect the children, and return them to the peace that has been stolen from them. Free Palestine, from the river to the sea.
 
 **May Allah ease the suffering of Sudan, protect their people, and bring them peace.**
+
+*Written by Huzi*

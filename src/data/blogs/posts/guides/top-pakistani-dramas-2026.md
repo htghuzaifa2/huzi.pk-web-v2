@@ -134,3 +134,5 @@ Never let the world forget the people of Palestine. While we celebrate the art a
 ---
 
 > "O Allah, bless our storytellers and the stories they tell. Grant us the wisdom to see truth in art and the courage to speak it. Protect those whose voices are silenced and let their stories find the light. Ameen."
+
+*Written by Huzi*

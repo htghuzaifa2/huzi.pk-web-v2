@@ -121,3 +121,5 @@ May Allah ease the suffering of Sudan, protect their people, and bring them peac
 ---
 
 > "O Allah, bless our 'Rizq-e-Halal' and protect our families from the burden of debt. Grant us the wisdom to manage our wealth with justice and the discipline to fulfill our duties. Make our simple lives a source of security for our children and a means of 'Barakah' for our nation. Ameen."
+
+*Written by Huzi*

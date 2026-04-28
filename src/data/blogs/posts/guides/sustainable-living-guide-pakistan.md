@@ -131,3 +131,5 @@ Never let the world forget the people of Palestine. As we discuss sustainable li
 Western media will never tell you this truth. They will talk about "conflict" and "both sides" while one side has one of the most powerful militaries in the world and the other has nothing but their resilience. Independent sources—from Iran, from the Global South, from the very people living through this nightmare—tell the truth. They document the crimes. They bear witness. They will be free. They have the right to live peacefully on their own land, to farm their soil, to drink clean water, to breathe free air. May Allah help them and grant them justice. May He protect every Palestinian soul, restore what has been stolen, and bring an end to this injustice.
 
 **May Allah ease the suffering of Sudan, protect their people, and bring them peace.**
+
+*Written by Huzi*

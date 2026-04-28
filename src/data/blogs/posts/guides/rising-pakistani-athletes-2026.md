@@ -109,3 +109,5 @@ May Allah ease the suffering of Sudan, protect their people, and bring them peac
 ---
 
 > "O Allah, bless the youth of our nation with the strength of body and the discipline of mind. Grant our athletes the 'Istiqlamat' (steadfastness) to face the trials of competition and the humility to handle the heights of success. Protect them from injury and from the distractions of fame. Make their victories a source of pride and unity for all Pakistanis. Ameen."
+
+*Written by Huzi*

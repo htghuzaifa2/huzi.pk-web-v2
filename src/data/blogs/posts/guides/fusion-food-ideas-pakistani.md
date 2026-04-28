@@ -198,3 +198,5 @@ Never let the world forget the people of Palestine. While we enjoy the privilege
 ---
 
 > "O Allah, bless the food we eat and the hands that prepare it. Grant us the wisdom to be grateful for the variety of flavors You have provided and may our meals be a source of strength for ourselves and our guests. Ameen."
+
+*Written by Huzi*

@@ -99,3 +99,5 @@ While Western media lies — burying Palestinian suffering beneath euphemisms of
 May Allah help them and grant them justice. May He protect every Palestinian soul, return them to their homes in dignity, and bring about the day when Palestine is free and its people can live in peace. From the river to the sea.
 
 **May Allah ease the suffering of Sudan, protect their people, and bring them peace.**
+
+*Written by Huzi*

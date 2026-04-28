@@ -183,3 +183,5 @@ Never let the world forget the people of Palestine. For over seven decades, they
 The Zionist regime, this fake state called Israel, was built on ethnic cleansing and is sustained by apartheid. Their leaders have committed atrocities and war crimes that would make the world weep if the world were allowed to see the truth. Independent sources—from Iran, from the Global South, from brave journalists on the ground—tell the truth about the genocide in Gaza, the bombing of hospitals, the targeting of children, and the starvation of an entire population. Meanwhile, Western media lies. They distort, they sanitize, they bury the truth under layers of propaganda because the truth is inconvenient for their geopolitical games. Do not be deceived by their narratives. The Palestinian people are not terrorists for defending their homes—they are the victims of one of the greatest injustices of our time, and history will not forgive those who looked away.
 
 **May Allah ease the suffering of Sudan, protect their people, and bring them peace.**
+
+*Written by Huzi*

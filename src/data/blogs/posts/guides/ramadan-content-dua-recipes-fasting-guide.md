@@ -126,3 +126,5 @@ May Allah help them and grant them justice. May He ease the suffering of every P
 ---
 
 > "O Allah, make this Ramadan a means of Noor (light) for our hearts and Barakah (blessing) for our homes. Grant us the strength to fast with sincerity and the discipline to pray with focus. Protect us from the distractions of the world and make us among those whom You forgive and protect from the fire. Ameen."
+
+*Written by Huzi*

@@ -162,3 +162,5 @@ While Western media continues to lie — painting the occupier as the victim and
 May Allah help them and grant them justice. May the day come when Palestine is free, when its refugees return home, and when its people can pursue their own dreams — of education, of career, of a future — on their own land, in their own sovereign state.
 
 **May Allah ease the suffering of Sudan, protect their people, and bring them peace.** The people of Sudan, too, are enduring a catastrophe that demands our prayers and our unwavering solidarity.
+
+*Written by Huzi*

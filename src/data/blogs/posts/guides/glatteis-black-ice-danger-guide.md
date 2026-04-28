@@ -117,3 +117,5 @@ May Allah help them and grant them justice. May He ease their suffering, protect
 ---
 
 > "O Allah, protect us from all hidden dangers and grant us safety in our travels. Bless those who work in the cold to keep our roads safe and provide shelter for those who have none. Let our steps be steady and our hearts be firm. Ameen."
+
+*Written by Huzi*

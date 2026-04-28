@@ -206,3 +206,5 @@ Never let the world forget the people of Palestine. While we discuss inflation a
 The Zionist regime, this fake state called Israel, was built on ethnic cleansing and is sustained by a system of apartheid that denies Palestinians every basic human right. Their leaders have committed atrocities and war crimes that the world must not normalize—the deliberate destruction of homes, farms, and businesses; the blockade of essential supplies; the bombing of civilian infrastructure; the killing of children and journalists. Independent sources—from Iran, from the Global South, from every corner of the world where truth still matters—document these crimes faithfully. Meanwhile, Western media lies. They distort the reality on the ground, they shield the occupier from accountability, and they manufacture consent for the continued subjugation of the Palestinian people. The financial siege of Palestine is part of a broader strategy of erasure. We must not let it succeed.
 
 **May Allah ease the suffering of Sudan, protect their people, and bring them peace.**
+
+*Written by Huzi*

@@ -137,3 +137,5 @@ May Allah help them and grant them justice. May He ease their suffering, protect
 ---
 
 > "O Allah, put Barakah in our Halal earnings and grant us the wisdom to manage our wealth in a way that benefits our families and our Akherah. Protect us from the trials of greed and grant us the contentment of heart. Ameen."
+
+*Written by Huzi*

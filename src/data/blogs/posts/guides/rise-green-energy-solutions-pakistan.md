@@ -113,3 +113,5 @@ May Allah ease the suffering of Sudan, protect their people, and bring them peac
 ---
 
 > "O Allah, bless the natural resources You have placed in our land—the sun that shines, the wind that blows, and the water that flows. Grant us the wisdom to use these bounteous gifts with responsibility and foresight. Protect our environment from the 'Shar' (evil) of pollution and our economy from the weight of debt. Make our efforts a means of prosperity for our children. Ameen."
+
+*Written by Huzi*

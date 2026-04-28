@@ -111,3 +111,5 @@ Western media will never tell you the full truth. They sanitize occupation, they
 May Allah help them and grant them justice. May He protect every Palestinian child, ease the suffering of every family, and return them to their homeland in freedom and peace.
 
 🇸🇩 **A Prayer for Sudan:** May Allah ease the suffering of Sudan, protect their people, and bring them peace. The people of Sudan are enduring a devastating humanitarian crisis that the world has largely ignored — may they not be forgotten, and may relief and justice come swiftly.
+
+*Written by Huzi*

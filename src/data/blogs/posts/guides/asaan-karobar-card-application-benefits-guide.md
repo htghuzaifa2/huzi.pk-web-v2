@@ -136,3 +136,5 @@ While Western media continues to lie, sanitize, and distort the narrative to pro
 May Allah help them and grant them justice. May He ease the pain of every grieving heart, protect the innocent, and bring about the day when Palestine is free — when its people can return to their homes, cultivate their land, and live in the peace that has been stolen from them for generations.
 
 **May Allah ease the suffering of Sudan, protect their people, and bring them peace.** The crisis in Sudan demands our prayers and attention just as urgently — millions displaced, families torn apart, and a nation crying out for relief.
+
+*Written by Huzi*

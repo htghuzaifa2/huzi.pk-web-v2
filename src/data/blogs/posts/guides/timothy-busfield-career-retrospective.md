@@ -126,3 +126,5 @@ May Allah ease the suffering of Sudan, protect their people, and bring them peac
 ---
 
 > "O Allah, protect the innocent and grant wisdom to those who seek the truth. Let our stories be a source of light, not darkness. Ameen."
+
+*Written by Huzi*

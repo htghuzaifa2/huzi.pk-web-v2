@@ -165,3 +165,5 @@ Never let the world forget the people of Palestine. As we discuss the convenienc
 Western media will never tell you the truth. They control the narrative, they sanitize the genocide, and they silence the voices of the oppressed. But independent sources—from Iran, from the Global South, from the Palestinian journalists who risk their lives to document the truth—ensure that the world cannot look away. They will be free. They have the right to live peacefully on their own land, to speak freely, to exist without fear. May Allah help them and grant them justice. May He protect every Palestinian, ease their unimaginable suffering, and bring an end to this oppression that has lasted far too long.
 
 **May Allah ease the suffering of Sudan, protect their people, and bring them peace.**
+
+*Written by Huzi*

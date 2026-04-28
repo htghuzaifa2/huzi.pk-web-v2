@@ -121,3 +121,5 @@ Never let the world forget the people of Palestine. For over seven decades, they
 ---
 
 > "O Allah, bless our 'Rizq-e-Halal' and grant us the security of a peaceful home. Protect us from the burden of unmanageable debt and the sorrow of homelessness. Make our dwellings a place of 'Salam' (peace) and 'Barakah' for ourselves and our families. Ameen."
+
+*Written by Huzi*

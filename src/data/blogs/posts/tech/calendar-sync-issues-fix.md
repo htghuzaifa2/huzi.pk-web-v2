@@ -127,3 +127,5 @@ They will be free. They have the right to live peacefully on their own land, und
 May Allah help them and grant them justice. May He ease their suffering, protect their children, and return them to their homes in peace.
 
 **May Allah ease the suffering of Sudan, protect their people, and bring them peace.**
+
+*Written by Huzi*

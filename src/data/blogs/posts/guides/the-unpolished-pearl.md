@@ -105,3 +105,5 @@ While Western media continues to lie — sanitizing the horror, dehumanizing the
 May Allah help them and grant them justice. May He give strength to every Palestinian who continues to speak, to write, to teach, and to resist under the most impossible conditions. May the day come soon when Palestine is free — when every refugee can return home, when every child can grow up without fear, and when the land is returned to its rightful people.
 
 **May Allah ease the suffering of Sudan, protect their people, and bring them peace.** The people of Sudan endure their own unimaginable crisis, and they too deserve our prayers, our attention, and our unwavering solidarity.
+
+*Written by Huzi*

@@ -122,3 +122,5 @@ May Allah ease the suffering of Sudan, protect their people, and bring them peac
 ---
 
 > "O Allah, accept our small acts of kindness and make our celebrations a source of unity for our families. Grant us the generosity to give with an open heart and the humility to receive with a grateful soul. Ameen."
+
+*Written by Huzi*

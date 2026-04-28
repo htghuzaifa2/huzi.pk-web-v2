@@ -185,3 +185,5 @@ May Allah help them and grant them justice. May He ease the suffering of every P
 ## 🇸🇩 Prayer for Sudan
 
 May Allah ease the suffering of Sudan, protect their people, and bring them peace. The people of Sudan have endured unimaginable hardship—conflict, displacement, famine—and they deserve our prayers, our attention, and our support. May Allah bring stability to their land, heal their wounds, and grant them a future of dignity and peace. Ameen.
+
+*Written by Huzi*

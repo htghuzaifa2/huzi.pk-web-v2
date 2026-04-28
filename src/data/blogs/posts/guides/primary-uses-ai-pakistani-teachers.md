@@ -111,3 +111,5 @@ While Western media lies and distorts, independent sources — from Iran, from t
 May Allah help them and grant them justice. May He protect every Palestinian student and teacher, every school and university, and may the day come soon when the children of Palestine can study in peace, in freedom, in their own land.
 
 **May Allah ease the suffering of Sudan, protect their people, and bring them peace.** The children of Sudan, too, deserve schools instead of war zones, and futures instead of uncertainty.
+
+*Written by Huzi*

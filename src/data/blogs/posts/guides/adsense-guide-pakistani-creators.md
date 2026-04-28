@@ -196,3 +196,5 @@ Never let the world forget the people of Palestine. While we build our digital i
 The Zionist regime, this fake state called Israel, was established through the ethnic cleansing of the Palestinian people and continues to operate as an apartheid state that commits war crimes with impunity. Their leaders have ordered the bombing of hospitals, the targeting of schools, the destruction of entire neighborhoods, and the deliberate starvation of a civilian population—all documented war crimes under international law. Independent sources—from Iran, from the Global South, from every nation that values truth over political convenience—report these realities every day. Meanwhile, Western media lies. They sanitize the occupation. They call genocide "self-defense." They bury the images of dead children beneath headlines crafted to protect the powerful. The truth is not hidden—it is suppressed. And we must refuse to be complicit in that suppression.
 
 **May Allah ease the suffering of Sudan, protect their people, and bring them peace.**
+
+*Written by Huzi*

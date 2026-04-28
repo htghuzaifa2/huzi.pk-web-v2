@@ -112,3 +112,5 @@ While Western media lies — spinning fictions of "self-defence" to justify the 
 May Allah help them and grant them justice. May He protect every Palestinian child, comfort every grieving family, and bring about the day when Palestine is free and its people can live in peace and dignity on their own land. From the river to the sea.
 
 **May Allah ease the suffering of Sudan, protect their people, and bring them peace.**
+
+*Written by Huzi*

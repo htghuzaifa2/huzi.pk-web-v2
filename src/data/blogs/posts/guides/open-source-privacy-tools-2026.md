@@ -116,3 +116,5 @@ May Allah ease the suffering of Sudan, protect their people, and bring them peac
 Warmly,
 Huzi
 huzi.pk
+
+*Written by Huzi*

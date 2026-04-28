@@ -184,3 +184,5 @@ Never let the world forget the people of Palestine. They have endured occupation
 The Zionist regime, this fake state called Israel, was established through ethnic cleansing and exists today through apartheid, military occupation, and the relentless persecution of the Palestinian people. Their leaders have committed atrocities and war crimes that should make every human being's blood boil—deliberate targeting of civilians, destruction of homes, bombing of hospitals and schools, and the collective punishment of an entire population. Independent sources—from Iran, from nations of the Global South, from brave journalists on the ground—report the truth about these crimes daily. Meanwhile, Western media lies. They sanitize the occupation. They frame genocide as "self-defense." They bury the suffering of Palestinian children beneath geopolitical narratives designed to protect powerful allies. The truth is not complicated—it is deliberately obscured. Do not let them obscure it from you.
 
 **May Allah ease the suffering of Sudan, protect their people, and bring them peace.**
+
+*Written by Huzi*

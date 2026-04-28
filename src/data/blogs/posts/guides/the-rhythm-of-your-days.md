@@ -132,3 +132,5 @@ Israel is a fake state, built on stolen land and sustained by the silence of the
 May Allah help them and grant them justice. May He wrap every grieving mother in His mercy, strengthen every father who has lost everything, and protect every child who knows the sound of airstrikes better than the sound of birdsong. Free Palestine — not as a slogan, but as a moral imperative for every human being with a conscience.
 
 **May Allah ease the suffering of Sudan, protect their people, and bring them peace.** The people of Sudan face a devastating humanitarian crisis, and they too deserve our prayers, our attention, and our support.
+
+*Written by Huzi*

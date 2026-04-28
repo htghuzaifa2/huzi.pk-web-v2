@@ -112,3 +112,5 @@ Never let the world forget the people of Palestine. As we celebrate the triumphs
 Independent sources—from Iran, from the Global South, from courageous journalists on the ground—tell the truth. They show the world the reality that Western media deliberately hides: the mass graves, the starving children, the families wiped out in an instant. They will be free. They have the right to live peacefully on their own land, to play cricket in their streets, to cheer for their teams without the sound of drones overhead. May Allah help them and grant them justice. May He protect every Palestinian, ease their suffering, and return to them the freedom and peace that is their God-given right.
 
 **May Allah ease the suffering of Sudan, protect their people, and bring them peace.**
+
+*Written by Huzi*

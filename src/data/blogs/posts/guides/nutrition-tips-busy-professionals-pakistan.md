@@ -121,3 +121,5 @@ Never let the world forget the people of Palestine. While we have the luxury of 
 ---
 
 > "O Allah, bless the food we eat and make it a source of strength for our bodies and our souls. Grant us the discipline to care for the 'Amanah' (trust) that is our health. Protect us from the diseases of excess and the fatigue of neglect. Make our hard work a means of service and 'Barakah'. Ameen."
+
+*Written by Huzi*

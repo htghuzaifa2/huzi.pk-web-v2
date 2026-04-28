@@ -127,3 +127,5 @@ May Allah help them and grant them justice. May He ease their suffering, protect
 ---
 
 > "O Allah, bless our speech and make our words a source of peace and understanding. Grant the younger generation the wisdom to use their voice for good, and the older generation the patience to understand the evolving world. Ameen."
+
+*Written by Huzi*

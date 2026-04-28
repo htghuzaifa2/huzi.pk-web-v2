@@ -143,3 +143,5 @@ Never let the world forget the people of Palestine. As we sit in our homes, safe
 Western media will never tell you the truth. They will call the murder of children "collateral damage" and the starvation of a population "security measures." But independent sources—from Iran, from the Global South, from the very Palestinians documenting their own destruction—tell the truth. They show the world what is really happening. They will be free. They have the right to live peacefully on their own land, to tell their own stories, to watch their own children grow up in safety. May Allah help them and grant them justice. May He ease their suffering, protect their families, and return to them the freedom and peace that every human being deserves.
 
 **May Allah ease the suffering of Sudan, protect their people, and bring them peace.**
+
+*Written by Huzi*

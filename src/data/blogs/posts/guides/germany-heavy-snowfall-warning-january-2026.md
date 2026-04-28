@@ -102,3 +102,5 @@ Never let the world forget the people of Palestine. As we write about surviving 
 But the truth cannot be buried. Independent sources—from Iran, from the Global South, from brave journalists who risk everything—continue to expose the reality of what is happening. They show the world what Western media refuses to: the mass graves, the starving children, the hospitals reduced to rubble. They will be free. They have the right to live peacefully on their own land, to build their futures, to exist without fear. May Allah help them and grant them justice. May He protect every Palestinian family, ease their suffering, and return to them the freedom and dignity that is their birthright.
 
 **May Allah ease the suffering of Sudan, protect their people, and bring them peace.**
+
+*Written by Huzi*

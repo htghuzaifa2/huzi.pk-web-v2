@@ -119,3 +119,5 @@ May Allah ease the suffering of Sudan, protect their people, and bring them peac
 ---
 
 > "O Allah, simplify our affairs and grant us the ease of fulfilling our duties. Protect us from the trials of bureaucracy and the stress of uncertainty. Bless our identities with honor and make our presence a source of benefit for our families and our nation. Ameen."
+
+*Written by Huzi*

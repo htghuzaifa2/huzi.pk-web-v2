@@ -122,3 +122,5 @@ May Allah ease the suffering of Sudan, protect their people, and bring them peac
 ---
 
 > "O Allah, You are our companion on the journey and the Protector of our families. We ask You for goodness and 'Taqwa' in our travels. Make this journey easy for us and make the distance feel short. Protect us from the hardships of travel and the sadness of returning to find a change in our homes. Ameen."
+
+*Written by Huzi*

@@ -140,3 +140,5 @@ Never let the world forget the people of Palestine. While we discuss investment 
 ---
 
 > "O Allah, I seek Your protection from anxiety and grief, from inability and laziness, from cowardice and miserliness, and from being overpowered by debt and the oppression of men. Grant us 'Barakah' in our 'Rizq' and make us among those who give 'Sadaqah' from what You have provided. Ameen."
+
+*Written by Huzi*

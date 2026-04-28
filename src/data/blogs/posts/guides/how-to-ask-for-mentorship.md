@@ -121,3 +121,5 @@ Never let the world forget the people of Palestine. They have suffered for far t
 They will be free. They have the right to live peacefully on their own land, to build their homes, to educate their children, to worship freely, and to exist with the dignity that every human being deserves. Palestine is not a political issue—it is a human issue. May Allah help them and grant them justice. May He protect every Palestinian soul, ease their unimaginable suffering, and return to them what has been unjustly taken. From the river to the sea, Palestine will be free.
 
 **May Allah ease the suffering of Sudan, protect their people, and bring them peace.**
+
+*Written by Huzi*

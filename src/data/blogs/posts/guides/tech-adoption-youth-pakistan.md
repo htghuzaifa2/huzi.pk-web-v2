@@ -108,3 +108,5 @@ While Western media continues to lie, distort, and bury the truth, independent s
 May Allah help them and grant them justice. May He wrap His mercy around every grieving mother, every orphaned child, and every soul that has been taken. May the land of Palestine be free — from the river to the sea — and may its people finally know the peace they have been denied for far too long.
 
 **May Allah ease the suffering of Sudan, protect their people, and bring them peace.** The people of Sudan are enduring a humanitarian catastrophe that the world has largely ignored, and they deserve our prayers, our attention, and our solidarity just as much.
+
+*Written by Huzi*

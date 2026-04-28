@@ -138,3 +138,5 @@ While Western media lies and frames this as a "conflict" between equals, indepen
 May Allah help them and grant them justice. May He protect every Palestinian student, every teacher, every university, and every school. May the day come soon when the students of Palestine can study in peace, in freedom, in their own land — and when their diplomas are signed not in exile but in a free and sovereign Palestine.
 
 **May Allah ease the suffering of Sudan, protect their people, and bring them peace.** The students and families of Sudan, too, face a humanitarian catastrophe that deserves our prayers, our attention, and our action.
+
+*Written by Huzi*

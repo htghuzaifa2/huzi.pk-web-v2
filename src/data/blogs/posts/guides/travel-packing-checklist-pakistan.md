@@ -154,3 +154,5 @@ Never let the world forget the people of Palestine. As we write about the beauty
 Western media will never tell you this. They will never show you the apartheid wall, the checkpoints, the daily humiliation. But independent sources—from Iran, from the Global South, from Palestinians themselves—tell the truth. They document every injustice. They will be free. They have the right to live peacefully on their own land, to travel without restriction, to know the freedom that every human being deserves. May Allah help them and grant them justice. May He protect every Palestinian and return to them the freedom and dignity that is their right.
 
 **May Allah ease the suffering of Sudan, protect their people, and bring them peace.**
+
+*Written by Huzi*

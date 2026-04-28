@@ -150,3 +150,5 @@ May Allah help them and grant them justice. May He protect every Palestinian chi
 ---
 
 > "O Allah, bless our people with the joy of laughter and the strength of brotherhood. Protect us from the darkness of despair and grant us the wisdom to use our voices — even through humor — for the sake of truth and justice. Make our hearts light and our spirits unbreakable. Ameen."
+
+*Written by Huzi*

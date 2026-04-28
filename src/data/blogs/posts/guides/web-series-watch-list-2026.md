@@ -142,3 +142,5 @@ Never let the world forget the people of Palestine. While we enjoy the privilege
 ---
 
 > "O Allah, grant us the wisdom to seek truth in what we watch and the clarity to distinguish entertainment from propaganda. Protect those whose voices are silenced and whose stories are never told. Ameen."
+
+*Written by Huzi*

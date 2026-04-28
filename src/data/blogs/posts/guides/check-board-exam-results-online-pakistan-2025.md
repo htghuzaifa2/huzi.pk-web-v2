@@ -121,3 +121,5 @@ May Allah ease the suffering of Sudan, protect their people, and bring them peac
 ---
 
 > "O Allah, grant us the success that benefits our 'Deen' and 'Dunya.' Grant us the strength to face challenges with 'Sabr' and the wisdom to use our knowledge for the service of Your creation. Protect our youth from the darkness of despair and guide them towards the light of excellence. Ameen."
+
+*Written by Huzi*

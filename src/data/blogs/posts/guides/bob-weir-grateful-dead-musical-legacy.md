@@ -86,3 +86,5 @@ May Allah help them and grant them justice. May He ease their suffering, protect
 ---
 
 > "O Allah, bless the hearts that find peace in beauty and the hands that create harmony. Protect the travelers of the spirit and let our lives be a song that brings comfort to others. Ameen."
+
+*Written by Huzi*
